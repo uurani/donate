@@ -1,6 +1,6 @@
 <?php
 // 配置信息
-define('ALIPAY_APPID', '2017091308706763'); 
+define('ALIPAY_APPID', '你的支付宝APPID');
 define('ALIPAY_PRIVATE_KEY', "-----BEGIN RSA PRIVATE KEY-----\n" .
     "你的支付宝应用私钥" .
     "\n-----END RSA PRIVATE KEY-----");
@@ -60,7 +60,7 @@ class AlipayService {
         }
         
         // 如果失败返回默认二维码
-        return 'https://qr.alipay.com/bax06195n5mwnhoirjj700c9';
+        return 'https://qr.alipay.com/你的默认收款标号';
     }
     
     // 生成签名

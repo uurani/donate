@@ -123,5 +123,21 @@ donate
 ├── favicon.ico             # 网站图标
 └── index.php
 ```
+#### ​修改配置​
+- 修改`pay/pay.php`中的支付宝参数
+```PHP
+define('ALIPAY_APPID', '你的支付宝APPID'); 
+define('ALIPAY_PRIVATE_KEY', "-----BEGIN RSA PRIVATE KEY-----\n" .
+    "你的支付宝应用私钥" .
+    "\n-----END RSA PRIVATE KEY-----");
+
+define('ALIPAY_PUBLIC_KEY', "-----BEGIN PUBLIC KEY-----\n" .
+    "你的支付宝公钥" .
+    "\n-----END PUBLIC KEY-----");
+```
+- 修改`pay/pay.php`中63行的默认值，创建订单的时候，f12查询元素然后复制链接即可
+```PHP
+  return 'https://qr.alipay.com/你的默认收款标号';
+```
 #### ​🌐 效果预览​
 ![image](image.png) 
